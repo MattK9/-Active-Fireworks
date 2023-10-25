@@ -8,21 +8,21 @@ let gravity;
 function setup() {
   createCanvas(windowWidth, windowHeight);
   colorMode(HSB);
-  gravity = createVector(0, 0.2);
-  stroke(255);
-  strokeWeight(4);
-  background(0);
+  gravity = createVector(0, 0.1);
+  stroke(10);
+  strokeWeight(8);
+  background(8);
 }
 
 function draw() {
   colorMode(RGB);
-  background(0, 0, 0, 25);
+  background(0, 0, 0, 30);
   
-  if (random(1) < 0.04) {
+  if (random(1) < 0.50) {
     fireworks.push(new Firework());
   }
   
-  for (let i = fireworks.length - 1; i >= 0; i--) {
+  for (let i = fireworks.length - 10; i >= 0; i--) {
     fireworks[i].update();
     fireworks[i].show();
     
