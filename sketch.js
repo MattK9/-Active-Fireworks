@@ -8,7 +8,7 @@ let gravity;
 function setup() {
   createCanvas(windowWidth, windowHeight);
   colorMode(HSB);
-  gravity = createVector(0, 0.1);
+  gravity = createVector(0, 0.2);
   stroke(10);
   strokeWeight(8);
   background(8);
