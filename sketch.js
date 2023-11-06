@@ -18,7 +18,6 @@ function draw() {
   if (paused) 
 function key pressed() {
   if (key ==='p') {
-}
 
 }else{
   colorMode(RGB);
@@ -36,3 +35,4 @@ function key pressed() {
       fireworks.splice(i, 1);
     }
   }
+}
