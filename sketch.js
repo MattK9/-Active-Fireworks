@@ -1,7 +1,7 @@
 // Daniel Shiffman
 // http://codingtra.in
 // https://youtu.be/CKeyIbT3vXI
-
+var paused = false
 const fireworks = [];
 let gravity;
 
@@ -15,6 +15,12 @@ function setup() {
 }
 
 function draw() {
+  if (paused) 
+function key pressed() {
+  if (key ==='p') {
+}
+
+}else{
   colorMode(RGB);
   background(0, 0, 0, 30);
   
@@ -30,4 +36,3 @@ function draw() {
       fireworks.splice(i, 1);
     }
   }
-}
