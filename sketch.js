@@ -14,10 +14,9 @@ function setup() {
   background(8);
 }
 
-function draw() {
   if (paused) {
 
-}else{
+}else{ function draw(){
   colorMode(RGB);
   background(0, 0, 0, 30);
   
