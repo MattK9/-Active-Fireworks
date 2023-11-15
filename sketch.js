@@ -1,7 +1,7 @@
 // Daniel Shiffman
 // http://codingtra.in
 // https://youtu.be/CKeyIbT3vXI
-var paused = false
+var paused = false;
 const fireworks = [];
 let gravity;
 
@@ -14,26 +14,30 @@ function setup() {
   background(8);
 }
 
+ function draw() {
   if (paused) {
-
-} else { function draw() {
-  colorMode(RGB);
-  background(0, 0, 0, 30);
-  
-  if (random(1) < 0.50) {
-    fireworks.push(new Firework());
-  }
-  
-  for (let i = fireworks.length - 10; i >= 0; i--) {
-    fireworks[i].update();
-    fireworks[i].show();
+    // Do paused stuff
+  } else {
+    colorMode(RGB);
+    background(0, 0, 0, 30);
     
-    if (fireworks[i].done()) {
-      fireworks.splice(i, 1);
+    if (random(1) < 0.50) {
+      fireworks.push(new Firework());
+    }
+    
+    for (let i = fireworks.length - 10; i >= 0; i--) {
+      fireworks[i].update();
+      fireworks[i].show();
+      
+      if (fireworks[i].done()) {
+        fireworks.splice(i, 1);
+      }
     }
   }
 }
-}
-function key pressed() {
+
+function keyPressed() {
   if (key ==='p') {
-paused = true}}
+    paused = true
+  }
+}
