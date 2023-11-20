@@ -38,6 +38,4 @@ function setup() {
 
 function keyPressed() {
   if (key ==='p') {
-    paused = true
-  }
-}
+     paused = !paused }}
