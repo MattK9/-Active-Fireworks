@@ -45,3 +45,14 @@ fill (0);
 textSize (50);
 text ('RESET', 320, 455);
 PopStateEvent();
+function isMouseOverReset(){
+  let isMouseOver = false; 
+  if paused && mouseX > resetX && mouseX < (resetX + resetWidth) &&
+  mouseY > resetY && mouseY < (resetY + resetHeight)) {
+    isMouseOver = true;
+  }
+ return isMouseOver;  
+}
+function mouseDragged() {
+  console.log(mouseX) ; 
+}
