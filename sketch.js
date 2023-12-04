@@ -4,6 +4,10 @@
 var paused = false;
 const fireworks = [];
 let gravity;
+let resetX = 300;
+let resetY = 400;
+let resetWidth = 200;
+let resetHeight = 75;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -17,6 +21,13 @@ function setup() {
  function draw() {
   if (paused) {
     // Do paused stuff
+    push();
+    fill(255)
+    rect(resetX, resetY, resetWidth, resetHeight);
+    fill(0);
+    textSize(50);
+    text('RESET', 320, 455);
+    pop();
   } else {
     colorMode(RGB);
     background(0, 0, 0, 30);
@@ -38,21 +49,19 @@ function setup() {
 
 function keyPressed() {
   if (key ==='p') {
-     paused = !paused }}
-fill (255)
-rect (300, 400, 200, 75);
-fill (0);
-textSize (50);
-text ('RESET', 320, 455);
-PopStateEvent();
-function isMouseOverReset(){
+    paused = !paused 
+  }
+}
+
+function isMouseOverReset() {
   let isMouseOver = false; 
-  if paused && mouseX > resetX && mouseX < (resetX + resetWidth) &&
+  if (paused && mouseX > resetX && mouseX < (resetX + resetWidth) &&
   mouseY > resetY && mouseY < (resetY + resetHeight)) {
     isMouseOver = true;
   }
  return isMouseOver;  
 }
+
 function mouseDragged() {
   console.log(mouseX) ; 
 }
