@@ -12,7 +12,7 @@ let resetHeight = 75;
 function setup() {
   createCanvas(windowWidth, windowHeight);
   colorMode(HSB);
-  gravity = createVector(0, 0.15);
+  gravity = createVector(0, .15);
   stroke(10);
   strokeWeight(8);
   background(8);
