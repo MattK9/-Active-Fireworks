@@ -12,7 +12,7 @@ let resetHeight = 75;
 function setup() {
   createCanvas(windowWidth, windowHeight);
   colorMode(HSB);
-  gravity = createVector(0, 0.1);
+  gravity = createVector(0, 0.);
   stroke(10);
   strokeWeight(8);
   background(8);
@@ -64,4 +64,22 @@ function isMouseOverReset() {
 
 function mouseDragged() {
   console.log(mouseX) ; 
+}
+function mouseClicked() {
+  if (isMouseOverReset()) {
+    console.log('You clicked it!');
+    everythingButCreateCanvas();
+  } else {
+    console.log(`Clicked: ${mouseX}, ${mouseY}`);
+  }
+  return false;
+}
+
+function isMouseOverReset() {
+  let isMouseOver = false;
+  if (paused && mouseX > resetX && mouseX < (resetX + resetWidth) &&
+     mouseY > resetY && mouseY < (resetY + resetHeight)) {
+    isMouseOver = true;
+  }
+  return isMouseOver;
 }
