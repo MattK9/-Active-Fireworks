@@ -4,7 +4,7 @@
 var paused = false;
 const fireworks = [];
 let gravity;
-let resetX = 300;
+let resetX = 800;
 let resetY = 400;
 let resetWidth = 200;
 let resetHeight = 75;
@@ -26,7 +26,7 @@ function setup() {
     rect(resetX, resetY, resetWidth, resetHeight);
     fill(0);
     textSize(50);
-    text('RESET', 320, 455);
+    text('RESET', resetX + 20, resetY + 55);
     pop();
   } else {
     colorMode(RGB);
