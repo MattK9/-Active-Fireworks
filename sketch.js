@@ -11,6 +11,10 @@ let resetHeight = 75;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
+  everythingButCreateCanvas();
+}
+
+function everythingButCreateCanvas() {
   colorMode(HSB);
   gravity = createVector(0, 0.1);
   stroke(10);
