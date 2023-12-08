@@ -20,6 +20,7 @@ function everythingButCreateCanvas() {
   stroke(10);
   strokeWeight(8);
   background(8);
+  paused = false;
 }
 
  function draw() {
@@ -71,7 +72,6 @@ function mouseDragged() {
 }
 function mouseClicked() {
   if (isMouseOverReset()) {
-    console.log('You clicked it!');
     everythingButCreateCanvas();
   } else {
     console.log(`Clicked: ${mouseX}, ${mouseY}`);
