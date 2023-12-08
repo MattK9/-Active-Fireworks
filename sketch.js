@@ -83,3 +83,8 @@ function isMouseOverReset() {
   }
   return isMouseOver;
 }
+function setup() {
+  let div = createDiv('').size(10, 10);
+  div.style('background-color', 'orange');
+  div.center();
+}
