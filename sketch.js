@@ -65,7 +65,7 @@ function keyPressed() {
   } 
   if (key ==='r' ) {
     color = !color
-    paused = !paused 
+    fireworks.length=0
   }
 }
 
