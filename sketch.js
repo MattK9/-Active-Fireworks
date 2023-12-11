@@ -65,6 +65,7 @@ function keyPressed() {
   } 
   if (key ==='r' ) {
     color = !color
+    paused = !paused 
   }
 }
 
