@@ -41,10 +41,10 @@ function everythingButCreateCanvas() {
     
     if (random(1) < 0.50) {
       if (color){
-        fireworks.push(new Firework(hu = 0));
+        fireworks.push(new Firework( 0));
       }
       else{
-      fireworks.push(new Firework());
+      fireworks.push(new Firework(random(255)));
     }
     }
     
