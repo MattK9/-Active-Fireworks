@@ -46,6 +46,7 @@ function everythingButCreateCanvas() {
       else{
       fireworks.push(new Firework());
     }
+    }
     
     for (let i = fireworks.length - 10; i >= 0; i--) {
       fireworks[i].update();
