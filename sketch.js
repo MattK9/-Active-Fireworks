@@ -2,6 +2,8 @@
 // http://codingtra.in
 // https://youtu.be/CKeyIbT3vXI
 var paused = false;
+var color = false;
+
 const fireworks = [];
 let gravity;
 let resetX = 800;
@@ -38,6 +40,10 @@ function everythingButCreateCanvas() {
     background(0, 0, 0, 30);
     
     if (random(1) < 0.50) {
+      if (color){
+        fireworks.push(new Firework(hu = 0));
+      }
+      else{
       fireworks.push(new Firework());
     }
     
@@ -55,6 +61,9 @@ function everythingButCreateCanvas() {
 function keyPressed() {
   if (key ==='p') {
     paused = !paused 
+  } 
+  if (key ==='r' ) {
+    color = !color
   }
 }
 
