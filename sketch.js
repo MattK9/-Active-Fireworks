@@ -73,7 +73,8 @@ function mouseDragged() {
 function mouseClicked() {
   if (isMouseOverReset()) {
     everythingButCreateCanvas();
-  } else {
+  } else  if (!paused){
+    firework.push(new Firework(firework = new Particle (mouseX, mouseY, this.hu, true)));
     console.log(`Clicked: ${mouseX}, ${mouseY}`);
   }
   return false;
