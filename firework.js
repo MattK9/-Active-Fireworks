@@ -3,8 +3,9 @@
 // https://youtu.be/CKeyIbT3vXI
 
 class Firework {
-  constructor() {
-    this.hu = random(255);
+  constructor(hu) {
+
+   // this.hu = random(255);
     this.firework = new Particle(random(width), height, this.hu, true);
     this.exploded = false;
     this.particles = [];
